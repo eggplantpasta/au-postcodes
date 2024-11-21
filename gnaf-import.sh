@@ -2,7 +2,7 @@
 
 # based on code from https://geocode.earth/blog/2021/exploring-gnaf-with-sqlite/
 
-# set these variables to the correct paths (relative to the root of the repository)
+# edit these variables to the correct paths (relative to the root of the repository)
 GNAF_PATH="gnaf-data/g-naf_nov24_allstates_gda2020_psv_1017/G-NAF"
 GNAF_DATA_PATH="gnaf-data/g-naf_nov24_allstates_gda2020_psv_1017/G-NAF/G-NAF NOVEMBER 2024"
 
