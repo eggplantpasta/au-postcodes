@@ -10,6 +10,7 @@ GNAF_DATA_PATH="gnaf-data/g-naf_nov24_allstates_gda2020_psv_1017/G-NAF/G-NAF NOV
 # generate the database schema
 ###########################################################
 
+rm -f gnaf-data/gnaf.db gnaf-data/gnaf-import.sql gnaf-data/gnaf-indices.sql
 sqlite3 gnaf-data/gnaf.db < ${GNAF_PATH}/Extras/GNAF_TableCreation_Scripts/create_tables_ansi.sql
 
 ###########################################################
@@ -78,6 +79,7 @@ sqlite3 gnaf-data/gnaf.db > gnaf-data/gnaf-indices.sql << SQL
   SELECT 'PRAGMA synchronous=OFF;';
   SELECT 'PRAGMA journal_mode=OFF;';
   SELECT 'PRAGMA temp_store=MEMORY;';
+  SELECT '.echo on';
 
   SELECT printf(
     'CREATE INDEX IF NOT EXISTS %s ON %s (%s);',
