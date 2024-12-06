@@ -97,3 +97,11 @@ sqlite3 gnaf-data/gnaf.db > gnaf-data/gnaf-indices.sql << SQL
 SQL
 
 sqlite3 gnaf-data/gnaf.db < gnaf-data/gnaf-indices.sql
+
+###########################################################
+# create the views
+###########################################################
+sqlite3 gnaf-data/gnaf.db 'drop view if exists address_view'
+sed -i -E 's/CREATE OR REPLACE VIEW/CREATE VIEW/' ${GNAF_PATH}/Extras/GNAF_View_Scripts/address_view.sql
+sqlite3 gnaf-data/gnaf.db < ${GNAF_PATH}/Extras/GNAF_View_Scripts/address_view.sql
+sqlite3 gnaf-data/gnaf.db < views.sql
