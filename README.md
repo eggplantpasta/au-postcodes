@@ -3,7 +3,7 @@
 Code to work with Australian postcode data sourced from the the official government Geocoded National Address File (G-NAF) [source](https://data.gov.au/dataset/ds-dga-19432f89-dc3a-4ef3-b943-5326ef1dbecc/details).
 
 * Bash script to import the data to SQLite `gnaf-import.sh`
-
+* SQL script to create simplified postcode and state reference views `views.sql`
 
 ## Loading G_NAF source data
 
