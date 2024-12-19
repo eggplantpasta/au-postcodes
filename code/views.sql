@@ -1,5 +1,7 @@
 -- simplified postcode and state lookup views
 
+drop view if exists state_v;
+
 create view if not exists state_v (
   state_name,
   state_abbreviation
@@ -7,6 +9,8 @@ create view if not exists state_v (
 select state_name, 
 state_abbreviation 
 from state;
+
+drop view if exists postcode_v;
 
 create view if not exists postcode_v (
   postcode,

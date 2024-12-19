@@ -1,3 +1,10 @@
-# Ignore all data directory contents
+# gnaf-data directory contents
 gnaf-data/*
 !gnaf-data/.gitkeep
+
+# temporary code files
+code/gnaf-import.sql
+code/gnaf-indices.sql
+
+# sqlite database
+gnaf.db 
